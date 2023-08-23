@@ -1,0 +1,147 @@
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #2e1e2b;
+    color: #EFE1D1;
+   
+}
+
+header nav{
+    /* background-color:  #5d425b; */
+    background-color: #1A120B;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+header nav h1{
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+header nav form{
+    display: flex;
+    justify-content: center;
+}
+
+form input [type="text"]{
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.searchBox{
+    border: none;
+    font-size: 10px;
+    padding: 7px;
+    border-radius: 4px;
+    margin-right: 3px;
+}
+
+form >button[type="submit"]{
+    border: none;
+    font-size: 10px;
+    padding: 7px;
+    border-radius: 4px;
+}
+form >button[type="submit"]{
+   background-color: #e394bd;
+   cursor: pointer;
+   transition: background-color 0.2s ease-in-out;
+}
+
+form button[type="submit"]:hover{
+   background-color: #f256a6;
+ }
+
+
+ /* main section */
+ .recipe-container{
+    text-align: center;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 40px;
+    width: 80%;
+    margin: 10px auto;
+    padding: 29px;
+    place-items: center;
+}
+
+.recipe{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    border-radius: 4px;
+    cursor: pointer;
+    max-width: 350px;
+    padding: 10px;
+}
+
+.recipe img{
+    height: 300px;
+}
+
+.recipe button{
+    background-color: #7f5fa5;
+    padding: 5px;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+}
+
+.recipe button:hover{
+    background-color: #2e1e2b;
+}
+
+.recipe-container h2{
+    font-size: 24px;
+}
+
+/* recipe details */
+.recipe-details{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(100, 19, 72, 0.908);
+    border-radius: 4px;
+    width: 30%;
+    height: 60%;
+    font-size: 16px;
+    -webkit-transform: translate(-50%, -50%);
+}
+
+/* responsive code */
+@media screen and (max-width:600px){
+   header nav{
+    flex-direction: column;
+   }
+    
+    header nav form{
+        width: 80%;
+        margin-top: 16px;
+    }
+
+    .food{
+            height: 200px;
+            width: 200px;
+        }
+    
+}
